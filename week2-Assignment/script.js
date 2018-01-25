@@ -1,28 +1,45 @@
 const videoButton = document.getElementById("videoButton");
-const seagalPic = document.getElementById("seagalPic");
+const celebrityVideo = document.getElementById("celebrityVideo");
+const tableButton = document.getElementById("tableButton");
+const movieTable = document.getElementById("movieTable");
+const titleInput = document.getElementById("titleInput");
+const yearInput = document.getElementById("yearInput");
+const trivia = document.getElementById("trivia");
 //create celebrityVideo, table Button, movieTable, titleInput, yearInput and trivia variables for DOM manipulation using above code as reference
 
 
 triviaFunc = () => {
   alert("Please enter the letter for the corresponding answer.");
-  const value1 = prompt("What was Steven Seagal's first movie?   a: Above the Law, b: Under Siege, c: The Glimmer Man");
-  if(value1 === "a"){
-    alert("You got it right!");
+  const value1 = prompt("What was Shah Rukh Khan's first movie?\nA: Deewana\nB: Kuch Kuch Hota Hai\nC: Dilwale Dulhania Le Jayenge");
+  if(value1 === 'A' || value1 === 'a'){
+    alert("Correct!");
   } else {
     alert("Incorrect, Please try again.")
     triviaFunc();
   }
 
-  const value2 = prompt("How old is Steven Seagal?   a: 57, b: 72, c: 65" );
-  //use value collected from prompt, if else statements, operators, and alerts to handle trivia question
+  const value2 = prompt("How old is Shah Rukh Khan?\nA: 45\nB: 38\nC: 52" );
+  if (value2 === 'C' || value2 === 'c') {
+    alert("Correct!");
+  } else {
+    alert("Incorrect, Please try again.");
+    triviaFunc();
+  }
 
-  const value3 = prompt("What 2 martial arts forms does Seagal know? a: Akido, b: Muay Thai, c: Boxing, d: Judo");
+  const value3 = prompt("What 2 names are most prevelant in his movies?\nA: Akash\nB: Rahul\nC: Aman\nD: Raj");
   //use value collected from prompt, if else statements, operators, and alerts to handle trivia question
+  if (value3 === 'B' || value3 === 'b' || value3 ==== 'D' || value3 === 'd') {
+    alert("Correct!");
+  } else {
+    alert("Incorrect, Please try again");
+    triviaFunc();
+  }
 
 }
 
 trivia.addEventListener("click", function(){
 //call triviaFunc
+triviaFunc();
 });
 
 videoButton.addEventListener("click", function(){

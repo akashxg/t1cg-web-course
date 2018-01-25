@@ -7,51 +7,65 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
     <link rel=stylesheet href="src/css/style.css" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
     <title>academy</title>
   </head>
   <style>
   #celebrityName {
-    //center your text
-    //set text color
+    font-size: 50px;
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 35%;
+    color: black;
   }
   table, th, td {
-    //set your background-color,
+    background-color: pink;
     border: 1px solid black;
     margin-left:auto;
     margin-right:auto;
   }
   #celebrityPic {
-    //set your height and width to match with video
   }
   .displayClass{
     display: none;
   }
   #link {
-    //center your link
   }
   .date {
-    //center the date
   }
   .centerClass {
-    //block of code for centering certain elements.  This can be applied to elements you add this class to.
     display: block;
     margin-left: auto;
     margin-right: auto;
   }
+  .btn {
+    font-family: 'Montserrat', sans-serif;
+    background: none;
+    border: 2px solid;
+    border-bottom-width: 4px;
+    margin: 1em;
+    padding: 1em 2em;
+  }
   body {
-    //set background-color
+    background-color: #ececec;
   }
   </style>
   <body>
-    <h2>Celebrity Name</h2>
-    <div><button class="centerClass" id="trivia">Play Trivia</button></div>
-    <center>img tag with appropriate id assignment and src='your photo url here'</center>
-    <center><iframe id="seagalVideo" use displayClass to center this element width="315" height="420" src="youtube video url" frameborder="0" gesture="media" allowfullscreen></iframe></center>
-    <button class="centerClass" set button id>Picture Video Toggle</button>
-    <h4 id="link"><a href="link to wikipedia page">your celebrity on Wikipedia</h4></a>
+    <h2 id="celebrityName"><b>SHAH RUKH KHAN</b></h2>
+    <div><button class="centerClass btn" id="trivia"><b>PLAY TRIVIA</b></button></div>
+    <center><img id="celebrityPic" src="https://media.gqindia.com/wp-content/uploads/2016/02/GQ-Shahrukh-Khan-Harir-tips-products.jpg" height="500" alt="King Khan"></center>
+    <center><iframe id="srkVideo" class="displayClass" width="315" height="420" src="https://www.youtube.com/watch?v=V6sgb9RgxMo" frameborder="0" gesture="media" allowfullscreen></iframe></center>
+    <button class="centerClass btn" id="videoButton"><b>Picture/Video</b></button>
+    <h4 id="link"><a href="https://en.wikipedia.org/wiki/Shah_Rukh_Khan" target="_blank">Learn more...</h4></a>
     <table id="movieTable">
-      \\use table row tags <tr> table head tags <th> and table data tags <td> to create a table
+      <tr>
+        <th>Film</th>
+        <th>Year</th>
+      </tr>
+      <tr>
+        <td>Dilwale Dulhania Le Jayenge</td>
+        <td>1995</td>
+      </tr>
     </table>
     <input class="centerClass" id="titleInput" placeholder="title"></input>
     <input class="centerClass" id="yearInput" placeholder="year"></input>
