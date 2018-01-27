@@ -5,8 +5,6 @@ const movieTable = document.getElementById("movieTable");
 const titleInput = document.getElementById("titleInput");
 const yearInput = document.getElementById("yearInput");
 const trivia = document.getElementById("trivia");
-//create celebrityVideo, table Button, movieTable, titleInput, yearInput and trivia variables for DOM manipulation using above code as reference
-
 
 triviaFunc = () => {
   alert("Please enter the letter for the corresponding answer.");
@@ -27,7 +25,6 @@ triviaFunc = () => {
   }
 
   const value3 = prompt("What 2 names are most prevelant in his movies?\nA: Akash\nB: Rahul\nC: Aman\nD: Raj");
-  //use value collected from prompt, if else statements, operators, and alerts to handle trivia question
   if (value3 === 'B' || value3 === 'b' || value3 ==== 'D' || value3 === 'd') {
     alert("Correct!");
   } else {
@@ -38,23 +35,24 @@ triviaFunc = () => {
 }
 
 trivia.addEventListener("click", function(){
-//call triviaFunc
-triviaFunc();
+  triviaFunc();
 });
 
 videoButton.addEventListener("click", function(){
-//toggle celebrityPic and celebrityVideo classes with button functionality
+  const srkImage = document.getElementById("celebrityPic")
+  srkImage.classList.toggle("displayClass");
 });
 
 tableButton.addEventListener("click", function(){
   const row = movieTable.insertRow(1);
   const cell1 = row.insertCell(0);
-  // create variable to insert new cell similar to code above
+  const cell2 = row.insertCell(1);
   cell1.innerHTML = titleInput.value;
-  // add yearInput value to cell you just created
-  //call resetInputValues function;
+  cell2.innerHTML = yearInput.value;
+  resetInputValues();
 });
 
 resetInputValues = () => {
-  //define function to reset input values
+  titleInput.value = null;
+  yearInput.value = null;
 };
